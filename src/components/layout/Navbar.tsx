@@ -56,12 +56,6 @@ interface Navbar1Props {
 }
 
 const Navbar = ({
-  logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
-    alt: "logo",
-    title: "Shadcnblocks.com",
-  },
   menu = [
     { title: "Home", url: "/" },
     {
@@ -69,9 +63,13 @@ const Navbar = ({
       url: "/blogs",
     },
     {
-      title: "about",
+      title: "About",
       url: "/about",
     },
+    {
+      title: "Dashboard",
+      url: "/dashboard"
+    }
   ],
   auth = {
     login: { title: "Login", url: "/login" },
@@ -86,14 +84,9 @@ const Navbar = ({
         <nav className="hidden items-center justify-between lg:flex">
           <div className="flex items-center gap-6">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <img
-                src={logo.src}
-                className="max-h-8 dark:invert"
-                alt={logo.alt}
-              />
+            <a href={"/"} className="flex items-center gap-2">
               <span className="text-lg font-semibold tracking-tighter">
-                {logo.title}
+                DOCO Blog
               </span>
             </a>
             <div className="flex items-center">
@@ -119,12 +112,10 @@ const Navbar = ({
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <img
-                src={logo.src}
-                className="max-h-8 dark:invert"
-                alt={logo.alt}
-              />
+            <a href={"/"} className="flex items-center gap-2">
+              <span className="text-lg font-semibold tracking-tighter">
+                DOCO Blog
+              </span>
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -135,12 +126,8 @@ const Navbar = ({
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
-                      <img
-                        src={logo.src}
-                        className="max-h-8 dark:invert"
-                        alt={logo.alt}
-                      />
+                    <a href={"/"} className="flex items-center gap-2">
+
                     </a>
                   </SheetTitle>
                 </SheetHeader>
