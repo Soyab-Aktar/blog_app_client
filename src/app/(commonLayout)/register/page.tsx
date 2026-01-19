@@ -1,8 +1,11 @@
-export default function ContactPage() {
+import { SignupForm } from "@/components/modules/auth/register-form"
+
+export default function Page() {
   return (
-    <div className="p-5">
-      <h1 className="text-6xl font-bold"><span className="text-red-500">Register</span> Page</h1>
-      <p><b>Route : </b>/about/contact</p>
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <SignupForm />
+      </div>
     </div>
   )
 }
