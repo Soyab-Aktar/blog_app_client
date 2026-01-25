@@ -1,5 +1,4 @@
 import { env } from "@/env";
-import { getSession } from "better-auth/api";
 import { cookies } from "next/headers";
 
 const AUTH_URL = env.AUTH_URL;
