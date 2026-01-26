@@ -9,7 +9,7 @@ import { cookies } from "next/headers";
 export default async function Home() {
 
 
-  const { data } = await blogService.getBlogPost({
+  const { data } = await blogService.getBlogPosts({
     isFeatured: true,
     search: "",
   }, {
